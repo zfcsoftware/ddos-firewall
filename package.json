@@ -1,0 +1,38 @@
+{
+  "name": "ddos-firewall",
+  "version": "1.0.0",
+  "description": "",
+  "exports": "src/index.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon src/index.js"
+  },
+  "keywords": [
+    "ddos",
+    "waf",
+    "firewall",
+    "security",
+    "express",
+    "nodejs",
+    "javascript",
+    "node-waf",
+    "node-ddos",
+    "node-firewall",
+    "ddos-security",
+    "waf-security",
+    "firewall-security",
+    "cloudflare",
+    "cloudflare-ddos",
+    "cloudflare-waf",
+    "cloudflare-firewall",
+    "cloudflare-security"
+  ],
+  "author": "zfcsoftware",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "cookie-parser": "^1.4.6",
+    "fast-geoip": "^1.1.88",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
