@@ -10,5 +10,6 @@
 <p align="center"><a href="https://ddos-firewall-demo.zfc.com.tr/">LIVE DEMO</a> | 
 <a href="https://github.com/zfcsoftware/ddos-firewall/tree/test">LIVE DEMO SOURCE CODE</a></p>
 
-<p align="center">![ezgif-1-45a34109f7](https://github.com/zfcsoftware/ddos-protection/assets/123484092/2bbb692b-c56f-4c7c-9a0e-d6c31a6ec292)</p>
+<p align="center">
+<img src="https://github.com/zfcsoftware/ddos-protection/assets/123484092/2bbb692b-c56f-4c7c-9a0e-d6c31a6ec292" width="40" height="40" /></p>
 
