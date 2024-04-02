@@ -27,7 +27,8 @@
 - Using a reverse proxy service like Nginx is not recommended. In case of an attack, the traffic will first go through Nginx, so the attack may shut down your server before it reaches your project. It is recommended to run the project on port 80 and mirror your site as in the example in the test branch of the project.
 - For Cloudflare Turnstile Captcha, you need to change the information you receive with the `setConfig` function later. Even though we use Turnstile Captcha, we perform many checks in the background. Turnstile is only added for additional precaution.
 - `cookie-parser` The library needs to be used.
-- 
+
+
  ![Contributors](https://img.shields.io/github/contributors/zfcsoftware/ddos-firewall?color=dark-green) ![Forks](https://img.shields.io/github/forks/zfcsoftware/ddos-firewall?style=social) ![Stargazers](https://img.shields.io/github/stars/zfcsoftware/ddos-firewall?style=social) ![Issues](https://img.shields.io/github/issues/zfcsoftware/ddos-firewall) ![License](https://img.shields.io/github/license/zfcsoftware/ddos-firewall) 
 
 
@@ -98,6 +99,18 @@ You can change all of the following variables at any time using the `setConfig` 
 
 `skip_ip` It does not display waf to ip addresses in the array. 
 
+## Cloudflare Settings
+No settings are required to use the library, but it is recommended to do the following to filter DDOS attacks to a large extent.
+(The = sign indicates that the value of that setting should be the value opposite the = sign.)
+
+- Menu > Security > DDoS > Deploy a DDoS override > Override name (Required) = test > Ruleset action (Required) = Block > Ruleset sensitivity (Required) = High > Save
+- Menu > Security > Waf > Create rule > Rule name (required) = block > Field = Threat Score > Operator = greater than > Value = 3 > Choose action = Block > Deploy 
+(cf.threat_score gt 2)
+- Menu > Security > Waf > Create rule > Rule name (required) = waf > Field = Threat Score > Operator = greater than > Value = 0 > Choose action = JS Challenge > Deploy 
+(cf.threat_score gt 0)
+- Menu > Overview > Under Attack Mode > I'm Under Attack!
+
+When you are under attack and you make these adjustments, you will largely prevent the attack. If you include this library, the attack will probably not work.
 ## Support Us
 
 This library is completely open source and is constantly being updated. Please star this repo to keep these updates coming. Starring the repo will support us to improve it.
