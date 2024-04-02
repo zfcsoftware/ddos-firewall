@@ -28,9 +28,31 @@ const checkTurnstile = async (token, project_config) => {
     }
 }
 
+const checkIPFormat = (user_ip) => {
+    try {
+        return !user_ip || user_ip === undefined || (String(user_ip).indexOf('.') <= -1 && String(user_ip).indexOf(':') <= -1)
+    } catch (err) {
+        return false
+    }
+}
+
 const getIP = (req) => {
     try {
-        return req.headers['cf-connecting-ip'] || String(req.headers['x-forwarded-for']).split(',')[0] || req.ip || false
+        var user_ip = req.headers['cf-connecting-ip']
+        if (checkIPFormat(user_ip)) {
+            user_ip = String(req.headers['x-forwarded-for']).split(',')[0]
+        }
+        if (checkIPFormat(user_ip)) {
+            user_ip = req.connection.remoteAddress
+        }
+        if (checkIPFormat(user_ip)) {
+            user_ip = req.ip
+        }
+        if (checkIPFormat(user_ip)) {
+            return false
+        }
+        console.log(user_ip);
+        return user_ip
     } catch (err) {
         return false
     }
