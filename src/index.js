@@ -1,6 +1,5 @@
 const general = require('./module/general.js');
 var jwt = require('jsonwebtoken');
-const cookieParser = require('cookie-parser');
 
 var project_config = {
     protect: true,
@@ -11,7 +10,7 @@ var project_config = {
     skip_country: [],
     skip_ip: []
 }
-console.log('Config: ', project_config);
+console.log('DDOS Firewall Config: ', project_config);
 const setConfig = (config) => {
     project_config = {
         ...project_config,
@@ -47,7 +46,6 @@ const checkSessionToken = async (req, res, next) => {
 
         var data = req.cookies
         if (!data || !data["zfc_ddos_waf_session"]) {
-            console.log('a1');
             return waf(res)
         }
         var session = data["zfc_ddos_waf_session"]
@@ -55,19 +53,14 @@ const checkSessionToken = async (req, res, next) => {
 
 
         if (!decoded || !decoded.ip || !decoded.expire) {
-            console.log('a2');
             return waf(res)
         }
         if (decoded.ip != user_ip || decoded.expire < Date.now() || !decoded.agent || decoded.agent !== req.headers['user-agent']) {
-            console.log('a3');
             return waf(res)
         }
-        console.log('next');
-
         return next()
-
     } catch (err) {
-        console.log(err);
+        // console.log(err);
         return waf(res)
     }
 }
@@ -108,7 +101,6 @@ const createSession = async (req, res, next) => {
         var ck = jwt.sign(skip_data, project_config.waf_private_key, {
             expiresIn: (Number(project_config.session_active_time) / 1000),
         });
-        console.log('set cookie');
         res.cookie('zfc_ddos_waf_session', ck, { httpOnly: true, expires: new Date(skip_data.expire), secure: true })
         res.status(200).send()
     } catch (e) {
