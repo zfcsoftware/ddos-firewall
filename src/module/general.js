@@ -23,7 +23,7 @@ const checkTurnstile = async (token, project_config) => {
         }
         return true
     } catch (e) {
-        console.log(e);
+        // console.log(e);
         return false
     }
 }
@@ -51,7 +51,6 @@ const getIP = (req) => {
         if (checkIPFormat(user_ip)) {
             return false
         }
-        console.log(user_ip);
         return user_ip
     } catch (err) {
         return false
