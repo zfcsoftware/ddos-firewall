@@ -6,7 +6,7 @@
 
 # Installation and Testing
 ```bash
-git clone https://github.com/zfcsoftware/ddos-firewall/tree/test
+git clone -b test https://github.com/zfcsoftware/ddos-firewall.git
 cd ddos-firewall
 npm install
 node index
