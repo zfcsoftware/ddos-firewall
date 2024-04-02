@@ -1,6 +1,6 @@
 {
   "name": "ddos-firewall",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "src/index.js",
   "scripts": {
