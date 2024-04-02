@@ -1,6 +1,6 @@
 {
   "name": "ddos-firewall",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "This package adds protection against ddos attacks by returning a very small page resource. Since it returns a very small html resource, it is not affected by the attack. Compatible with Express. DDOS firewall",
   "main": "src/index.js",
   "scripts": {
