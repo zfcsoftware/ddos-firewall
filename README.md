@@ -14,10 +14,10 @@
 <h3 align="center">Demo</h3>
 <p align="center">
     <a href="https://ddos-firewall-demo.zfc.com.tr/" target="_blank">LIVE DEMO (VERCEL)</a> |
-    <a href="https://github.com/zfcsoftware/ddos-firewall/tree/test" target="_blank">LIVE DEMO SOURCE CODE</a>
+    <a href="https://github.com/zfcsoftware/ddos-firewall/tree/test" target="_blank">LIVE DEMO SOURCE CODE</a> | <a href="https://www.youtube.com/embed/oTXEEwluc5c?si=cf5qUrxfbkXEDkmU" target="_blank">LIVE ATTACK TEST</a>
 </p>
 <p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oTXEEwluc5c?si=cf5qUrxfbkXEDkmU" frameborder="0" allowfullscreen></iframe>
+<img src="https://raw.githubusercontent.com/zfcsoftware/ddos-firewall/main/src/waf/demo.gif"></img>
 </p>
 </p>
 
