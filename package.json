@@ -1,0 +1,27 @@
+{
+  "name": "ddos-firewall-test",
+  "version": "1.0.0",
+  "description": "This branch was created for a demo of the ddos-firewall library.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "ddos",
+    "firewall",
+    "express",
+    "middleware",
+    "security",
+    "ddos-firewall",
+    "ddos-firewall-test"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "ddos-firewall": "^1.0.3",
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0"
+  }
+}
