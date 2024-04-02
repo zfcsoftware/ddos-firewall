@@ -1,7 +1,7 @@
 {
   "name": "ddos-firewall",
-  "version": "1.0.3",
-  "description": "",
+  "version": "1.0.4",
+  "description": "This package adds protection against ddos attacks by returning a very small page resource. Since it returns a very small html resource, it is not affected by the attack. Compatible with Express. DDOS firewall",
   "main": "src/index.js",
   "scripts": {
     "test": "nodemon src/index.js"
@@ -27,6 +27,11 @@
     "cloudflare-security"
   ],
   "author": "zfcsoftware",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zfcsoftware/ddos-firewall"
+  },
+  "homepage": "https://github.com/zfcsoftware/ddos-firewall",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.6.8",
