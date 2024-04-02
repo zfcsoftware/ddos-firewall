@@ -29,7 +29,7 @@ app.use(checkReq)
 </code></pre>
 
 <h2 align="center">Use Cases</h2>
-<pre><code class="language-js">
+```js
     const express = require('express');
     const { createProxyMiddleware } = require('http-proxy-middleware');
     const { checkReq, setConfig } = require('ddos-firewall')
@@ -61,7 +61,7 @@ app.use(checkReq)
     app.listen(port, () => {
         console.log('Server is running on port ' + port)
     });
-</code></pre>
+```
 
 <p></p>
 <p align="center"></p>
