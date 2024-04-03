@@ -16,6 +16,7 @@ const setConfig = (config) => {
         ...project_config,
         ...config
     }
+    console.log('DDOS Firewall Config: ', project_config);
     return true;
 }
 const getConfig = () => {
@@ -24,7 +25,7 @@ const getConfig = () => {
 
 
 const waf = (res) => {
-    return res.status(403).sendFile(__dirname + '/waf/en.html');
+    return res.status(403).send(`<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>One Moment Please...</title><link href="https://e7.pngegg.com/pngimages/115/529/png-clipart-denial-of-service-attack-computer-icons-ddos-mitigation-anti-computer-network-cdr-thumbnail.png" rel="icon" type="image/x-icon"></head><body><script src="https://cdnjs.cloudflare.com/ajax/libs/devtools-detector/2.0.16/devtools-detector.js" integrity="sha512-3lXCTuKilhgjrsncB/3VJ1udp8qIDpaE8hfdiEVQepRBE/n2xjZnxx5vSyuayJKtLp3m8U0MSGInzFdH8ClkGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" onerror='window.location.href="https://innovationnorway.github.io/cloudflare-error-pages/waf_block.html"'></script><script src="https://cdn.jsdelivr.net/npm/ddos-firewall@1.0.2/src/waf/cdn.js" onerror='window.location.href="https://innovationnorway.github.io/cloudflare-error-pages/waf_block.html"'></script><script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=_turnstileCb" onerror='window.location.href="https://innovationnorway.github.io/cloudflare-error-pages/waf_block.html"' defer="defer"></script></body></html>`)
 }
 
 

@@ -45,7 +45,7 @@ app.use(checkReq)
 ```js
 const express = require('express');
 const { createProxyMiddleware } = require('http-proxy-middleware');
-const { checkReq, setConfig } = require('ddos-firewall')
+const { checkReq, setConfig, getConfig } = require('ddos-firewall')
 const cookieParser = require('cookie-parser');
 
 const bodyParser = require('body-parser');
