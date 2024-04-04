@@ -15,7 +15,7 @@ sudo docker run -d -p 80:80 zfcsoftware/ddos-firewall \
 -e waf_private_key=Hy0BGgcbHrkEHn0HBNC5NrsN7wkkciqnRvvlFUQ8bW0fymmCKw \
 -e session_active_time=86400000 \
 -e skip_country=[] \
--e skip_ip=[] \
+-e skip_ip=[]
 ```
 `PORT` The default is 80.  If 80 is used, it is automatically linked to the domain when a record is added.
 `TARGET` You must include a link to your site or server. Example for site: https://wmaster.net Example for server: http://188.132.139.10:80
