@@ -6,7 +6,7 @@
 ## Using with Docker
 
 ```bash
-sudo docker run zfcsoftware/ddos-firewall \
+sudo docker run -d -p 80:80 zfcsoftware/ddos-firewall \
 -e PORT=80 \
 -e TARGET=https://www.google.com \
 -e protect=true \
