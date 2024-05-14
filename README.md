@@ -19,13 +19,21 @@ sudo docker run -d -p 80:80 \
 zfcsoftware/ddos-firewall
 ```
 `PORT` The default is 80.  If 80 is used, it is automatically linked to the domain when a record is added.
+
 `TARGET` You must include a link to your site or server. Example for site: https://wmaster.net Example for server: http://188.132.139.10:80
+
 `protect` Indicates the protection status. If true, waf is activated. Since it does not allow bots such as Google bots, it is recommended to turn it on as the attack comes.
+
 `turnstile_public_key` You should create a turnstile project from your Cloudflare account and add the site key code. Not only Cloudflare control is done. We do many checks. This is an additional measure.
+
 `turnstile_private_key` You should create a turnstile project from your Cloudflare account and add the secret key code. Not only Cloudflare control is done. We do many checks. This is an additional measure.
+
 `waf_private_key` Used for JWT Encryption. It is strongly recommended to replace it.
+
 `session_active_time` Specifies how many milliseconds WAF will be removed for users who pass WAF. 86400000 is 1 Day.
+
 `skip_country` It can be entered as ["TR", "DE"]. WAF is not shown for the country codes you enter.
+
 `skip_ip` ["188.132.139.61"] Format. WAF is not shown to these ip addresses.
 
 # Installation and Testing
